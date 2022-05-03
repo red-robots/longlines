@@ -79,7 +79,7 @@ if($postHeroImage) {
 			$trail_status_option = get_field("trail_status","option");
 			$trail_status = ($trail_status_option=='open') ? 'active':'inactive';
 			$toplink = get_field("toplink","option");
-			$trail_text = ($trail_status_option=='open') ? 'Trails Open':'Trails Closed';
+			$trail_text = ($trail_status_option=='open') ? 'Gym Open':'Gym Closed';
 			?>
 			<div class="topinfo">
 				<span class="trail-status el <?php echo $trail_status ?>">
