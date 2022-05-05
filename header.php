@@ -163,7 +163,9 @@ if($postHeroImage) {
 		<div class="navbar">
 			<div class="wrapper cf">
 		            <div class="logo">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png">
+		            	<a href="<?php bloginfo('url'); ?>">
+		            		<img src="<?php bloginfo('template_url'); ?>/images/logo.png">
+		            	</a>
 		            </div>
 		        
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="sr"><?php esc_html_e( 'MENU', 'bellaworks' ); ?></span><span class="bar"></span></button>
