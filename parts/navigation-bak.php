@@ -49,6 +49,78 @@ if($parents) { ?>
 						<?php } else { ?>
 						<a href="#" class="parentlink<?php echo $has_children_class ?>" data-parent=".<?php echo $parent_id ?>"><span><?php echo $parent_name ?></span></a>
 						<?php } ?>
+						<?php /* CHILDREN MENU */ 
+						if($childenMenuItems) { 
+
+							// echo '<pre>';
+							// print_r($childenMenuItems);
+							// echo '</pre>';
+							?>
+
+							<ul class="sub-children">
+									
+							<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 
+								$childrenData = $ch['children_data'];
+								if($childrenData) { ?>
+								
+									
+										<?php foreach ($childrenData as $e) { 
+											$child_menu_name = $e['child_menu_name'];
+											$child_menu_pagelink = $e['child_menu_pagelink'];
+											$child_menu_target = ( isset($e['child_menu_pagelink_target'][0]) ) ? true : false;
+											$child_links = $e['child_menu_links'];
+											$childTarget = ($child_menu_target) ? ' target="_blank"':''
+											?>
+											<li>
+											<?php if ($child_menu_name) { ?>
+												
+												<?php if ($child_menu_pagelink && (strpos($child_menu_pagelink, 'http') !== false)) { ?>
+												<a href="<?php echo $child_menu_pagelink ?>" class="cmenu-link"<?php echo $childTarget ?>><?php echo $child_menu_name ?></a>
+												<?php } else { ?>
+													<?php echo $child_menu_name ?>
+												<?php } ?>
+												
+											<?php } ?>
+											
+											<?php if ($child_links) { ?>
+												<div class="submenu-links">
+													<ul class="submenu">
+														<?php foreach ($child_links as $ld) { 
+															$n = $ld['link'];
+															if($n) {
+																$name = $n['title'];
+																$link = ($n['url']) ? rtrim($n['url'],"/") : '#';
+																$target = ($n['target']) ? $n['target'] : '_self';
+																$res = ($link) ? get_page_id_by_permalink($link) : '';
+																$pageID = ( isset($res->ID) ) ? $res->ID : '';
+																$link_class = ($pageID) ? 'internal menu-page-' . $pageID : 'external';
+																if($pageID && $pageID==$current_post_id) {
+																	$link_class .= ' current_page_item';
+																}
+																if($name) { ?>
+																<li class="<?php echo $link_class ?>" data-pageid="<?php echo $pageID ?>">
+																	<a href="<?php echo $link ?>" target="<?php echo $target ?>" class="child-link"><span><?php echo $name; ?></span></a>
+																</li>
+																<?php } ?>
+															<?php } ?>
+
+														<?php } ?>
+													</ul>
+												</div>
+											<?php } ?>
+											</li>
+										<?php } ?>
+									
+								
+								
+								<?php }  ?>
+								
+							<?php $c++; } $childenMenuItems = array();?>
+
+							</ul>
+								
+
+						<?php } ?>
 					</li>
 					<?php } ?>
 				<?php $i++; } ?>
@@ -77,81 +149,16 @@ if($parents) { ?>
 					<?php } ?>
 				<?php } ?>
 				</ul>
+				<form action="<?php bloginfo('url'); ?>/" method="get">
+				    <input class="nav-search" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+				    <!-- <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search.png" /> -->
+				</form>
 			</div>
 			<?php } ?>
 		</nav>
 	</div>
 
-	<?php /* CHILDREN MENU */ 
-	if($childenMenuItems) { ?>
-
-		<div id="childrenNavs" class="navigation-children">
-			<a href="#" id="closeNavChild" class="closeNav"><span>x</span></a>
-			<div class="navchild-inner">
-				
-				<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 
-					$parent_name = $ch['parent_name'];
-					$childrenData = $ch['children_data'];
-					if($childrenData) { ?>
-					<div class="children-group <?php echo $k ?>" data-parent="<?php echo $k ?>">
-						<div class="parent-name"><?php echo $parent_name ?></div>
-						<div class="children-menu-wrap">
-							<?php foreach ($childrenData as $e) { 
-								$child_menu_name = $e['child_menu_name'];
-								$child_menu_pagelink = $e['child_menu_pagelink'];
-								$child_menu_target = ( isset($e['child_menu_pagelink_target'][0]) ) ? true : false;
-								$child_links = $e['child_menu_links'];
-								$childTarget = ($child_menu_target) ? ' target="_blank"':''
-								?>
-								<div class="children-menu-content">
-									<?php if ($child_menu_name) { ?>
-										<div class="submenu-name">
-											<?php if ($child_menu_pagelink && (strpos($child_menu_pagelink, 'http') !== false)) { ?>
-											<a href="<?php echo $child_menu_pagelink ?>" class="cmenu-link"<?php echo $childTarget ?>><?php echo $child_menu_name ?></a>
-											<?php } else { ?>
-												<?php echo $child_menu_name ?>
-											<?php } ?>
-										</div>
-									<?php } ?>
-									
-									<?php if ($child_links) { ?>
-										<div class="submenu-links">
-											<ul class="submenu">
-												<?php foreach ($child_links as $ld) { 
-													$n = $ld['link'];
-													if($n) {
-														$name = $n['title'];
-														$link = ($n['url']) ? rtrim($n['url'],"/") : '#';
-														$target = ($n['target']) ? $n['target'] : '_self';
-														$res = ($link) ? get_page_id_by_permalink($link) : '';
-														$pageID = ( isset($res->ID) ) ? $res->ID : '';
-														$link_class = ($pageID) ? 'internal menu-page-' . $pageID : 'external';
-														if($pageID && $pageID==$current_post_id) {
-															$link_class .= ' current_page_item';
-														}
-														if($name) { ?>
-														<li class="<?php echo $link_class ?>" data-pageid="<?php echo $pageID ?>">
-															<a href="<?php echo $link ?>" target="<?php echo $target ?>" class="child-link"><span><?php echo $name; ?></span></a>
-														</li>
-														<?php } ?>
-													<?php } ?>
-
-												<?php } ?>
-											</ul>
-										</div>
-									<?php } ?>
-								</div>
-							<?php } ?>
-						</div>
-					</div>
-					<?php } ?>
-				<?php $c++; } ?>
-
-
-			</div>
-		</div>
-
-	<?php } ?>
+	
 
 
 </div>

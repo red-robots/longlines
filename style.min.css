@@ -1618,7 +1618,6 @@ a:hover{color:#f0a493}
 .navbar .logo{display:inline-block;float:left;width:50px}
 .navbar .logo a,.navbar .logo img{display:inline-block;width:100%}
 .navbar .logo img{height:auto}
-body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 #overlay{width:100%;height:100%;position:fixed;top:0;left:0;z-index:999;background:rgba(0,0,0,0.45);display:none;-webkit-animation-duration:.5s;animation-duration:.5s}
 #site-navigation{position:fixed;top:30px;right:0;max-width:0;width:0;height:100%;z-index:9999;-webkit-transform:translateX(120%);transform:translateX(120%);-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}
 #site-navigation.open{-webkit-transform:translateX(0);transform:translateX(0);max-width:350px;width:100%;-webkit-box-shadow:-1px 4px 30px rgba(0,0,0,0.3);box-shadow:-1px 4px 30px rgba(0,0,0,0.3);overflow:visible}
@@ -1678,6 +1677,7 @@ body.nav-open #overlay{display:block;-webkit-animation-name:fadeIn;animation-nam
 body.nav-open .menu-toggle{opacity:0}
 #banner{width:100%;float:left;position:relative;background-color:#000;margin-top:85px}
 #banner.video-playing{z-index:300}
+#banner .logo-overlay{position:absolute;top:40%;left:0;right:0;margin-left:auto;margin-right:auto;width:200px}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative}
 #banner .static-banner .slides img.image-size-ref,#banner .flexslider .slides img.image-size-ref{visibility:hidden}
@@ -3688,6 +3688,7 @@ section.route-stories.half .block{width:50%}
 .topinfo span.daily-schedule{display:inline-block}
 .navbar{-webkit-box-shadow:none;box-shadow:none}
 #banner{margin-top:90px}
+#banner .logo-overlay{width:500px}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}
 #banner .static-banner .slides img.image-helper-mobile,#banner .flexslider .slides img.image-helper-mobile{display:none}
 #banner .slideCaption .text{font-size:40px}
@@ -3740,7 +3741,6 @@ body.subpage.single .intro-galleries.half .rightcol{width:70%;padding-left:15px}
 #pageTabs #tabcontent:before{left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 #pageTabs #tabcontent:after{right:0}
 body.scrolled .site-header{-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.1);box-shadow:0 3px 8px rgba(0,0,0,0.1)}
-body.scrolled .site-header .navbar{background:rgba(255,255,255,0.95)}
 .post-type-entries .postbox{width:25%}
 .post-type-entries.threecols .postbox{width:33.33%}
 .post-type-entries.threecols .postbox .details{padding-bottom:90px}

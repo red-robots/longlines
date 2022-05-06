@@ -106,7 +106,7 @@
 		
 		<?php if( $sponsors = get_field("sponsors","option") ) { ?>
 		<div class="footSponsors full text-center">
-			<div class="coltitle">Sponsors</div>
+			<div class="coltitle">Partners</div>
 			<div class="inner">
 			<?php foreach ($sponsors as $s) { 
 				$img = $s['image'];

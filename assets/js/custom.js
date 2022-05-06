@@ -41,11 +41,11 @@ jQuery(document).ready(function ($) {
   // 	});
   // }
   // $("select#diff").on("change", vali);
-  $('li.has-children').click(function () {
-    // alert('sisi');
-    // $(this).find('ul.sub-children').css('maxHeight:1000');
-    $(this).find('ul.sub-children').toggleClass('opensm');
-  });
+  // $('li.has-children').click( function() {
+  // 	// alert('sisi');
+  //     // $(this).find('ul.sub-children').css('maxHeight:1000');
+  //     $(this).find('ul.sub-children').toggleClass('opensm');
+  // });
   $("select#diff").change(function () {
     var diffResult = $(this).val();
     $('ul.items').find('li.show').removeClass('show');

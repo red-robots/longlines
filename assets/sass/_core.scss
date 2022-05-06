@@ -431,7 +431,7 @@ a {
 	}
 }
 body.scrolled .navbar {
-	background: rgba(255,255,255,.95);
+	// background: rgba(255,255,255,.95);
 }
 // body.current-slide-is-video .navbar {
 // 	background: rgba(255,255,255,.90);
@@ -836,6 +836,18 @@ body.nav-open {
 	// margin-bottom: 5px;
 	@include tab {
 		margin-top: 90px;;
+	}
+	.logo-overlay {
+		position: absolute;
+		top: 40%;
+		left: 0; 
+		right: 0; 
+		margin-left: auto; 
+		margin-right: auto; 
+		width: 200px;
+		@include tab {
+			width: 500px;
+		}
 	}
 	.static-banner,
 	.flexslider {
@@ -3932,7 +3944,7 @@ body.scrolled {
 		@include tab {
 			box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 			.navbar {
-				background: rgba(255, 255, 255, 0.95);
+				// background: rgba(255, 255, 255, 0.95);
 			}
 		}
 	}
