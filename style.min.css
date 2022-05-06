@@ -2082,7 +2082,7 @@ body.subpage.single .intro-galleries.half .rightcol{width:100%;float:left}
 #section-featured-posts .block .feat-image .bg img{width:100%;height:auto;float:left}
 #section-featured-posts .block .feat-image.no-image .bg:before{content:"";display:block;text-transform:uppercase;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);background-image:url("images/photo-coming-soon.png");background-size:100%;background-repeat:no-repeat;background-position:center;width:10vw;height:10vw;opacity:.25}
 .explore-other-stuff{width:100%;float:left;background-color:#707070;color:#FFF;position:relative;padding-bottom:40px}
-.explore-other-stuff:before{content:"";display:block;width:100%;height:70%;position:absolute;top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-image:url("images/logo-white.png");background-size:contain;background-position:center;background-repeat:no-repeat;opacity:.1}
+.explore-other-stuff:before{content:"";display:block;width:100%;height:70%;position:absolute;top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-image:url("images/logo-white-footer.png");background-size:contain;background-position:center;background-repeat:no-repeat;opacity:.1}
 .explore-other-stuff .wrapper{position:relative;z-index:10;padding-top:40px;padding-bottom:40px}
 .explore-other-stuff .sectionTitle{color:#FFF;text-align:center;margin-bottom:15px}
 .explore-other-stuff .entry{width:100%;text-align:center;margin:10px 0;font-size:15px;line-height:1.2}

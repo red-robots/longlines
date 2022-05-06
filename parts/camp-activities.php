@@ -15,7 +15,7 @@ if($camp_activities) { ?>
 
 
 	<div class="entryList flexwrap">
-		<?php $i=1; foreach ($camp_activities as $e) { ?>
+		<?php $i=1; foreach ($camp_activities as $e) { ?>a
 			<?php  
 			$title = $e['title'];
 			$time = $e['time'];
