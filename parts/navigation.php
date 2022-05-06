@@ -118,7 +118,7 @@ if($parents) { ?>
 											<?php } else { ?>
 												<?php echo $child_menu_name ?>
 												<?php if($sub_text){
-														echo '<div clas="subtext">'.$sub_text.'</div>';
+														echo '<div class="subtext">'.$sub_text.'</div>';
 													} ?>
 											<?php } ?>
 										</div>
