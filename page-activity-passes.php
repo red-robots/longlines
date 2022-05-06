@@ -52,7 +52,14 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 					$pass_args = array(
 						'posts_per_page'	=> -1,
 						'post_type'				=> 'pass',
-						'post_status'			=> 'publish'
+						'post_status'			=> 'publish',
+						'tax_query' => array(
+					        array(
+					            'taxonomy' => 'pass_type',
+					            'field'    => 'slug',
+					            'terms'    => 'membership',
+					        ),
+					    ),
 					);
 					$all_passes = get_posts($pass_args);
 					?>
@@ -119,6 +126,8 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 						</div>
 					<?php } ?>
 
+					
+
 					<?php
 					$single_activities = get_single_activity_passes_list('default'); /* see inc/func-activity-passes.php */
 					?>
@@ -166,6 +175,72 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 						<?php } ?>
 
 					</div>
+
+
+
+					<?php
+					$pass_args = array(
+						'posts_per_page'	=> -1,
+						'post_type'				=> 'pass',
+						'post_status'			=> 'publish',
+						'tax_query' => array(
+					        array(
+					            'taxonomy' => 'pass_type',
+					            'field'    => 'slug',
+					            'terms'    => 'day-pass',
+					        ),
+					    ),
+					);
+					$all_passes = get_posts($pass_args);
+					?>
+					
+					<div class=" text-center">
+						<?php if ($all_passes) { ?>
+						<div class="pass-types">
+							<?php foreach ($all_passes as $p) { 
+								$pid = $p->ID;
+								$adult = get_field("adult_price",$pid);
+								$young = get_field("young_price",$pid);
+								$price = get_field("price",$pid);
+								// need ability to hide and showd
+								$show = get_field("show_on_activities_page",$pid);
+								// echo '<pre>';
+								// print_r($show);
+								// echo '</pre>';
+								$buyButton = get_field("purchase_button",$pid);
+								$buttonName = (isset($buyButton['title']) && $buyButton['title']) ? $buyButton['title']:'Purchase Pass';
+								$buttonLink = (isset($buyButton['url']) && $buyButton['url']) ? $buyButton['url']:'';
+								$buttonTarget = (isset($buyButton['target']) && $buyButton['target']) ? $buyButton['target']:'_self';
+
+								if( $show == 'show' ) {
+								?>
+								<div class="type">
+									<div class="pass-name"><?php echo $p->post_title ?></div>
+									<div class="price">
+										<?php if ($adult) { ?>
+										<div class="adult-price pr">Adult &ndash; <?php echo $adult ?></div>	
+										<?php } ?>
+										<?php if ($young) { ?>
+										<div class="young-price pr">Youth &ndash; <?php echo $young ?></div>	
+										<?php } ?>
+										<?php if ($price) { ?>
+										<div class="young-price pr">Price &ndash; <?php echo $price ?></div>	
+										<?php } ?>
+
+										<?php if ($buttonName && $buttonLink) { ?>
+										<div class="buttondiv">
+											<a href="<?php echo $buttonLink ?>" target="<?php echo $buttonTarget ?>" class="btn-sm xs"><span><?php echo $buttonName ?></span></a>
+										</div>
+										<?php } ?>
+									</div>
+								</div>
+								<?php } ?>
+							<?php } ?>
+						</div>	
+						<?php } ?>
+					</div><br><br><br>
+
+
 					
 				</div>
 			</div>

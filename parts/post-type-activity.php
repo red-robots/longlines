@@ -93,6 +93,7 @@ while ( have_posts() ) : the_post();
 	/* FLEXIBLE CONTENT */
 	$flex_section_title = get_field("flexcontent_section_title");
 	$flex_blocks = get_field("flexcontent_text_image");
+	$section_icon_tib = get_field("section_icon_tib");
 	$margin = ($flex_section_title) ? '':' nomtop';
 	if($flex_blocks) { ?>
 		<section id="flexible-content" data-section="<?php echo $flex_section_title ?>" class="section-content">
@@ -100,7 +101,7 @@ while ( have_posts() ) : the_post();
 			<div class="section-title-div">
 				<div class="wrapper">
 					<div class="shead-icon text-center">
-						<!-- <div class="icon"><span class="ci-calendar"></span></div> -->
+						<div class="icon extra-card-icon"><img src="<?php echo $section_icon_tib['url'] ?>"></div>
 						<h2 class="stitle"><?php echo $flex_section_title ?></h2>
 					</div>
 				</div>

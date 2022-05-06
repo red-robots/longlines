@@ -98,6 +98,7 @@ if($parents) { ?>
 						<div class="children-menu-wrap">
 							<?php foreach ($childrenData as $e) { 
 								$child_menu_name = $e['child_menu_name'];
+								$sub_text = $e['sub_text'];
 								$child_menu_pagelink = $e['child_menu_pagelink'];
 								$child_menu_target = ( isset($e['child_menu_pagelink_target'][0]) ) ? true : false;
 								$child_links = $e['child_menu_links'];
@@ -107,9 +108,18 @@ if($parents) { ?>
 									<?php if ($child_menu_name) { ?>
 										<div class="submenu-name">
 											<?php if ($child_menu_pagelink && (strpos($child_menu_pagelink, 'http') !== false)) { ?>
-											<a href="<?php echo $child_menu_pagelink ?>" class="cmenu-link"<?php echo $childTarget ?>><?php echo $child_menu_name ?></a>
+											<a href="<?php echo $child_menu_pagelink ?>" class="cmenu-link"<?php echo $childTarget ?>>
+												<?php echo $child_menu_name ?>
+												</a>
+
+													<?php if($sub_text){
+														echo '<div class="subtext">'.$sub_text.'</div>';
+													} ?>
 											<?php } else { ?>
 												<?php echo $child_menu_name ?>
+												<?php if($sub_text){
+														echo '<div clas="subtext">'.$sub_text.'</div>';
+													} ?>
 											<?php } ?>
 										</div>
 									<?php } ?>

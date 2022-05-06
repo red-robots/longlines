@@ -1644,6 +1644,7 @@ a:hover{color:#f0a493}
 .navigation-children .submenu-name{font-family:"alvarocondensed",sans-serif;font-weight:500;font-size:15px;line-height:1.2;text-transform:uppercase;margin-bottom:10px}
 .navigation-children .submenu-name a.cmenu-link{display:inline-block;text-decoration:none;color:#404040}
 .navigation-children .submenu-name a.cmenu-link:hover{color:#e04826}
+.navigation-children .submenu-name .subtext{font-size:12px;text-transform:capitalize;color:rgba(0,0,0,0.5);line-height:1.2}
 .navigation-children .submenu a{display:inline-block;text-decoration:none;color:#191919;font-size:13px;padding:6px 0}
 .navigation-children .submenu a:hover{color:#e04826}
 .navigation-children .submenu li.current_page_item>a{color:#e04826}
@@ -1739,6 +1740,8 @@ body.single-activity #subpageSlides{width:100% !important;height:100% !important
 .homerow .shead-icon{margin:15px 0 10px}
 .homerow .shead-icon div.icon{margin-bottom:10px}
 .homerow .shead-icon div.icon span{font-size:30px}
+.homerow .shead-icon.extra-card-icon,.homerow .shead-icon.icon{width:30px;margin:0 auto 15px auto}
+.homerow .shead-icon.extra-card-icon img,.homerow .shead-icon.icon img{width:100%}
 .homerow.row1{background-color:#000;background-size:cover;background-repeat:no-repeat;background-position:center;color:#FFF}
 .homerow.row1 .wrapper{padding-top:100px;padding-bottom:90px}
 .homerow.row1 .textwrap{max-width:900px;width:100%;margin:0 auto;font-family:"alvarocondensed",sans-serif;font-size:20px;font-weight:300;line-height:1.5;text-transform:uppercase;text-align:center}
@@ -2592,6 +2595,8 @@ body.scrolled.single-dining.logged-in.admin-bar .post-hero-image .stats{top:135p
 body.scrolled .hero-register-button .registerBtn{position:fixed}
 .shead-icon{margin-bottom:35px}
 .shead-icon div.icon span{font-size:35px;line-height:1}
+.shead-icon div.icon.extra-card-icon,.shead-icon div.icon.icon{width:30px;margin:0 auto 15px auto}
+.shead-icon div.icon.extra-card-icon img,.shead-icon div.icon.icon img{width:100%}
 .dining-event-details{background:#f2f2f2;padding-top:50px;padding-bottom:40px}
 .dining-event-details .details{font-size:16px;font-weight:normal;line-height:1.6;color:#707070;text-transform:uppercase}
 .dining-event-details .details .info{margin:25px auto}

@@ -588,6 +588,7 @@ body.scrolled .navbar {
 			display: block;
 		}
 	}
+
 }
 .navigation-children {
 	position: fixed;
@@ -631,6 +632,12 @@ body.scrolled .navbar {
 			&:hover {
 				color: $red;
 			}
+		}
+		.subtext {
+			font-size: 12px;
+			text-transform: capitalize;
+			color: rgba(#000, .5);
+			line-height: 1.2;
 		}
 	}
 	.submenu {
@@ -1304,6 +1311,13 @@ body.single-activity  {
 			margin-bottom: 10px;
 			span {
 				font-size: 30px;
+			}
+		}
+		&.extra-card-icon, &.icon {
+			width: 30px;
+			margin: 0 auto 15px auto;
+			img {
+				width: 100%;
 			}
 		}
 		
@@ -7224,7 +7238,15 @@ body.scrolled {
 			font-size: 35px;
 			line-height: 1;
 		}
+		&.extra-card-icon, &.icon {
+			width: 30px;
+			margin: 0 auto 15px auto;
+			img {
+				width: 100%;
+			}
+		}
 	}
+
 }
 
 .dining-event-details {
