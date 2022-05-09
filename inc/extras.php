@@ -2316,7 +2316,7 @@ function get_images_dir($fileName=null) {
     return get_bloginfo('template_url') . '/images/' . $fileName;
 }
 function get_default_job_location() {
-    return 'charlotte';
+    return 'sioux-city';
 }
 
 function exclude_post_types_banner() {

@@ -37,7 +37,13 @@
     );
 	}
 
+	// echo '<pre>';
+	// print_r($tax_query);
+	// echo '</pre>';
+
+
 	$count_query = ($tax_query) ? count($tax_query):0;
+	// echo $count_query;
 	if($count_query>1) {
 		$tax_query['relation'] = 'OR';
 	}
@@ -139,7 +145,11 @@ if( $posts->have_posts() ) { ?>
 						<div class="posts-inner">
 							
 							<div class="flex-inner">
-								<?php if ($postsByDepartment) { ?>
+								<?php if ($postsByDepartment) { 
+									// echo '<pre>';
+									// print_r($postsByDepartment);
+									// echo '</pre>';
+									?>
 									
 									<?php foreach ($postsByDepartment as $p) {
 										
