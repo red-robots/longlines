@@ -224,7 +224,7 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 										<div class="young-price pr">Youth &ndash; <?php echo $young ?></div>	
 										<?php } ?>
 										<?php if ($price) { ?>
-										<div class="young-price pr">Price &ndash; <?php echo $price ?></div>	
+										<div class="young-price pr"><?php echo $price ?></div>	
 										<?php } ?>
 
 										<?php if ($buttonName && $buttonLink) { ?>

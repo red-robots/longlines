@@ -415,7 +415,7 @@ a {
 	.wrapper {
 		height: 100%;
 		padding-top: 10px;
-		padding-bottom: 6px;
+		padding-bottom: 10px;
 	}
 	.logo {
 		display: inline-block;
@@ -788,7 +788,7 @@ body.scrolled .navbar {
 	box-shadow: none;
 	padding: 10px;
 	position: relative;
-	top: -2px;
+	top: 4px;
 	transition: all ease .3s;
 	span.bar {
 		width: 25px;

@@ -287,7 +287,7 @@ while ( have_posts() ) : the_post();
 
 							<?php /* AGE */ ?>
 							<div class="cell age-col">
-								<span class="cell-label">Age:</span>
+								<span class="cell-label">Qualifiers:</span>
 								<?php if ($a_qualifiers) { ?>
 								<span class="age"><?php echo $a_qualifiers ?></span>
 								<?php } ?>
@@ -422,11 +422,11 @@ while ( have_posts() ) : the_post();
 	$wtw_section_title = get_field("wtw_section_title");  
 	$wtw_default_image = get_field("wtw_default_image");  
 	$wtw_options = get_field("wtw_options");  
-	$s3_title = get_field("whereto_section_title");
+	$s3_title = get_field("wtw_section_title");
 	$section3 = ($s3_title) ? $s3_title : 'What to wear';
 	$wtw_class = ($wtw_default_image && $wtw_options) ? 'half':'full';
 	if ($wtw_options) { ?>
-	<section id="section-whattowear" data-section="<?php echo $section3 ?>" class="section-content <?php echo $wtw_class ?>">
+	<section id="section-whattowear" data-section="<?php echo $section3 ?>" class="section-content <?php echo $wtw_class ?> <?php echo $s3_title; ?>">
 		<div class="wrapper">
 			<div class="flexwrap">
 				<?php if ($wtw_default_image) { ?>

@@ -1614,7 +1614,7 @@ a:hover{color:#f0a493}
 .topinfo span.today.open .businessHours{height:auto;max-height:100%;opacity:1;overflow:visible;-webkit-transform:translateY(0);transform:translateY(0);z-index:50}
 .topinfo span.today.open a i.arrow{-webkit-transform:translateY(3px) rotate(180deg);transform:translateY(3px) rotate(180deg)}
 .navbar{width:100%;float:left;position:relative;-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.1);box-shadow:0 3px 8px rgba(0,0,0,0.1)}
-.navbar .wrapper{height:100%;padding-top:10px;padding-bottom:6px}
+.navbar .wrapper{height:100%;padding-top:10px;padding-bottom:10px}
 .navbar .logo{display:inline-block;float:left;width:50px}
 .navbar .logo a,.navbar .logo img{display:inline-block;width:100%}
 .navbar .logo img{height:auto}
@@ -1667,7 +1667,7 @@ a:hover{color:#f0a493}
 .closeNav span:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 .closeNav:hover{background:#b33a1e}
 .closeNav:hover span:before,.closeNav:hover span:after{background:#FFF !important}
-.menu-toggle{display:block;width:40px;height:40px;float:right;background:transparent;-webkit-appearance:none;border:0;-webkit-box-shadow:none;box-shadow:none;padding:10px;position:relative;top:-2px;-webkit-transition:all ease .3s;transition:all ease .3s}
+.menu-toggle{display:block;width:40px;height:40px;float:right;background:transparent;-webkit-appearance:none;border:0;-webkit-box-shadow:none;box-shadow:none;padding:10px;position:relative;top:4px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .menu-toggle span.bar{width:25px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:8px}
 .menu-toggle span.bar,.menu-toggle span.bar:before,.menu-toggle span.bar:after{height:4px;background:#fff;position:absolute;border-radius:2px}
 .menu-toggle span.bar:before,.menu-toggle span.bar:after{content:"";display:block;width:100%;top:0;left:0}

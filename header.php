@@ -35,13 +35,13 @@ var currentURL = '<?php echo get_permalink();?>';
 var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6PHW0M8"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9B8C6GDP3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-9PW6PHW0M8');
+  gtag('config', 'G-L9B8C6GDP3');
 </script>
 <?php wp_head(); ?>
 </head>
