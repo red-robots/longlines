@@ -2294,10 +2294,10 @@ function upcoming_bands_by_date($offset=0,$limit=12) {
 //     $result = $wpdb->get_results($query);
 //     return ($result) ? $result : '';
 // }
-add_action('wp_head', 'show_top_admin_menu_bar', 100);
+add_action('after_setup_theme', 'show_top_admin_menu_bar', 100);
 
 function show_top_admin_menu_bar() {
-  if (current_user_can('scheduler')) {
+  if ( current_user_can('editor') || current_user_can('scheduler') ) {
       show_admin_bar(true);
   }
 }
