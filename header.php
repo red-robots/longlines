@@ -60,6 +60,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=532013761657112&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <?php wp_head(); ?>
 </head>
 <?php
