@@ -1131,7 +1131,8 @@ body.nav-open {
 	}
 }
 #banner.subpageBanner {
-	margin-top: 86px;
+	// margin-top: 86px;
+	margin-top: 99px;
 	@include tab {
 		// margin-top: 0;
 	}
@@ -12902,15 +12903,19 @@ body.page-template-page-race {
 		padding: 0.5em 1em 0.4em;
 		background: rgba(0, 0, 0, 0.85);
 		color: #FFF;
-		font-size: 2em;
+		font-size: 1.5em;
 		font-weight: 300;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		float: none;
 		margin: 0 auto;
 		position: relative;
-		top: 50%;
+		top: 70%;
 		transform: translateY(-50%);
+		@include tab() {
+			font-size: 2em;
+			top: 50%;
+		}
 	}
 	&.stats.closed {
 		background: transparent!important;

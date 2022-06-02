@@ -1714,7 +1714,7 @@ body.nav-open .menu-toggle{opacity:0}
 #banner ul.slides.single-slide .type-video .videoIframe{width:100% !important;height:100% !important;position:absolute;top:0;left:0;z-index:-100;display:block !important}
 #banner ul.slides.single-slide .type-video .videoIframeDiv.play_video .videoIframe{z-index:100}
 #banner ul.slides.single-slide .outer-video-wrap{position:absolute;top:0;left:0;width:100%;height:100%;z-index:30}
-#banner.subpageBanner{margin-top:86px}
+#banner.subpageBanner{margin-top:99px}
 #banner.subpageBanner .slideItem img{display:block !important;width:100%;height:auto;float:left}
 #banner.taxonomy-banner{margin-top:16px}
 #banner.taxonomy-banner .static-banner{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#707070}
@@ -3483,7 +3483,7 @@ body.page-template-page-race .post-type-entries .flex-inner.countItems1,body.pag
 .accomodations .flexwrap .t2{font-size:18px;font-weight:600}
 .accomodations .flexwrap .text{font-size:16px}
 .custom-message-banner{background:transparent !important}
-.custom-message-banner .innerTxt{display:inline-block;width:auto;padding:.5em 1em .4em;background:rgba(0,0,0,0.85);color:#FFF;font-size:2em;font-weight:300;text-transform:uppercase;letter-spacing:2px;float:none;margin:0 auto;position:relative;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.custom-message-banner .innerTxt{display:inline-block;width:auto;padding:.5em 1em .4em;background:rgba(0,0,0,0.85);color:#FFF;font-size:1.5em;font-weight:300;text-transform:uppercase;letter-spacing:2px;float:none;margin:0 auto;position:relative;top:70%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 .custom-message-banner.stats.closed{background:transparent !important;position:absolute !important;top:0 !important;left:0;width:100%;height:100%;padding:0}
 .team-staff-section .team-info{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;border-top:2px solid #f2f2f2;padding:60px 0 40px}
 .team-staff-section .photo{width:100%;position:relative;margin-bottom:30px}
@@ -3945,6 +3945,7 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 .accomodations .flexwrap .leftcol span.img{display:block}
 .accomodations .flexwrap .leftcol img.logo-img{display:none}
 .accomodations .flexwrap .rightcol{width:65%;text-align:left;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;align-items:center}
+.custom-message-banner .innerTxt{font-size:2em;top:50%}
 .team-staff-section .team-info{padding:60px 0}
 .team-staff-section .photo{width:30%;margin-bottom:0}
 .team-staff-section .bio{width:70%;padding-left:3vw}
