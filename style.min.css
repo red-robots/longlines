@@ -3644,6 +3644,11 @@ ul.items .show{display:block}
 .clear{clear:both}
 input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-color:rgba(255,255,255,0.6);padding:0 10px;margin:10px 0 0 0;background-image:url(images/eyeglass.png);background-position:right 10px top 5px;background-repeat:no-repeat}
 .tribe-events-content a{color:#e04826 !important}
+body.page-id-1075 .text-centered-section p{margin:0}
+body.page-id-1075 .gform_body .gform_fields .gfield_price{margin-bottom:30px;background-color:#f8f4f4;padding:20px}
+body.page-id-1075 .gform_body .gform_fields .gfield_price.gfield_total{width:100%;background-color:#fff;border-left:5px solid #f8f4f4}
+body.page-id-1075 .gform_body .gform_fields #field_2_15{width:100%}
+body.page-id-1075 .gform_body .gform_fields #field_2_15 .has_first_name p{margin-right:20px}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
@@ -3981,6 +3986,8 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 #timeline-area.timeline-wrapper .timeline .middle-line{width:50%}
 #timeline-area.timeline-wrapper .timeline .middle-line:before{content:"";display:block;width:25px;height:25px;border-radius:50%;background-color:#e04826;position:absolute;top:-10px;right:-12.5px}
 #timeline-area.timeline-wrapper .timeline .middle-line:after{content:"";display:block;width:7vw;border-bottom:2px solid #e04826;position:absolute;bottom:0;right:0;margin-right:-3.5vw;margin-bottom:-1.2vw}
+body.page-id-1075 .gform_body .gform_fields{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+body.page-id-1075 .gform_body .gform_fields .gfield_price{width:32%}
 }@media screen and (min-width:820px){.hero-register-button .stats{position:absolute;top:85px;left:0}
 .double-filter-wrapper .inside{width:45%;float:left;padding:2.5%}
 .double-filter-wrapper .filter-wrapper .select,.double-filter-wrapper .filter-wrapper .select-wrap.align-middle{width:100%}

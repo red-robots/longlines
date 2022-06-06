@@ -14196,3 +14196,44 @@ input.nav-search {
 	color: $red !important;
 	// text-decoration: underline !important;
 }
+body.page-id-1075 {
+	.text-centered-section p {
+		margin: 0;
+	}
+	.gform_body {
+		.gform_fields {
+			@include tab() {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: flex-start;
+			}
+			
+			.gfield_price {
+				
+				margin-bottom: 30px;
+				background-color: #f8f4f4;
+				padding: 20px;
+				// float: left;
+				// padding: 0 0 0 40px;
+				@include tab() {
+					width: 32%;
+
+				}
+				&.gfield_total {
+					width: 100%;
+					background-color: #fff;
+					border-left: 5px solid #f8f4f4;
+				}
+
+			}
+			#field_2_15 {
+				width: 100%;
+				.has_first_name p {
+					margin-right: 20px;
+				}
+			}
+		}
+		
+	}
+}
