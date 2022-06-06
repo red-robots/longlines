@@ -27,10 +27,12 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 	$all_access_title = get_field("all_access_title");
 	$all_access_feat_image = get_field("all_access_feat_image");
 	$all_access_text = get_field("all_access_text");
+	$all_access_buy = get_field("aap_link");
 
 	$single_access_title = get_field("single_access_title");
 	$single_access_feat_image = get_field("single_access_feat_image");
 	$single_access_text = get_field("single_access_text");
+	$single_access_buy = get_field("sap_link");
 	$class1 = ( ($all_access_title || $all_access_text) && ($single_access_title || $single_access_text) ) ? 'half':'full';
 	?>
 
@@ -108,7 +110,21 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 								</div>
 								<?php } ?>
 							<?php } ?>
+
 						</div>	
+						<?php if( $all_access_buy ) { 
+							$buyButton = $all_access_buy;
+							$buttonName = (isset($buyButton['title']) && $buyButton['title']) ? $buyButton['title']:'Purchase Pass';
+							$buttonLink = (isset($buyButton['url']) && $buyButton['url']) ? $buyButton['url']:'';
+							$buttonTarget = (isset($buyButton['target']) && $buyButton['target']) ? $buyButton['target']:'_self';
+							?>
+							<div class="clear"></div>
+							<div class="center">
+								<div class="buttondiv">
+									<a href="<?php echo $buttonLink ?>" target="<?php echo $buttonTarget ?>" class="btn-sm xs"><span><?php echo $buttonName ?></span></a>
+								</div>
+							</div>
+						<?php } ?>
 						<?php } ?>
 					</div>
 				</div>
@@ -173,7 +189,7 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 							<?php } ?>
 						</div>
 						<?php } ?>
-
+						
 					</div>
 
 
@@ -237,6 +253,19 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 								<?php } ?>
 							<?php } ?>
 						</div>	
+						<?php } ?>
+						<?php if( $single_access_buy ) { 
+							$buyButton = $single_access_buy;
+							$buttonName = (isset($buyButton['title']) && $buyButton['title']) ? $buyButton['title']:'Purchase Pass';
+							$buttonLink = (isset($buyButton['url']) && $buyButton['url']) ? $buyButton['url']:'';
+							$buttonTarget = (isset($buyButton['target']) && $buyButton['target']) ? $buyButton['target']:'_self';
+							?>
+							<div class="clear"></div>
+							<div class="center">
+								<div class="buttondiv">
+									<a href="<?php echo $buttonLink ?>" target="<?php echo $buttonTarget ?>" class="btn-sm xs"><span><?php echo $buttonName ?></span></a>
+								</div>
+							</div>
 						<?php } ?>
 					</div><br><br><br>
 
