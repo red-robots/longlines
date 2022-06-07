@@ -7166,7 +7166,8 @@ body.page-template-page-stories {
 		transition: all ease .3s;
 		@media screen and (min-width: $tabwidth) {
 			position: absolute;
-			top: 85px;
+			// top: 85px;
+			top: 100px;
 			left: 0;
 		}
 		@include tab {
@@ -7987,8 +7988,8 @@ body.pageNoBanner {
 	.schedules-list {
 		padding: 20px 0;
 		max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+    	width: 100%;
+    	margin: 0 auto;
 		ul.items {
 			margin: 0 0;
 			padding: 0 0;
@@ -8046,6 +8047,15 @@ body.pageNoBanner {
 					align-items: flex-end;
 					width: auto;
 					padding-right: 5px;
+				}
+				&.center {
+					width: 100%;
+					justify-content: center;
+					align-items: center;
+					margin-top: 20px;
+					border-bottom: 1px solid rgba(#000, .4);
+					// text-align: center;
+					// display: block;
 				}
 			}
 			.event {

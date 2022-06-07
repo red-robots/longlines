@@ -118,12 +118,24 @@ get_header(); ?>
 					
 					<div class="schedules-list">
 						<ul class="items">
-						<?php foreach ($schedules as $s) { ?>
+						<?php foreach ($schedules as $s) { 
+
+							$u = $s['underline'];
+							if( $s['event'] == '' ) {
+								$c = 'center';
+							}
+							?>
 							<li class="item">
-								<div class="time"><?php echo $s['time'] ?></div>
-								<div class="event"><?php echo $s['event'] ?></div>
+								<div class="time <?php echo $c; ?> ">
+										<?php echo $s['time'] ?>
+									</div>
+								<?php if($s['event']) { ?>
+									<div class="event"><?php echo $s['event'] ?></div>
+								<?php } ?>
 							</li>
-						<?php } ?>
+						<?php 
+						$c = '';
+						} ?>
 						</ul>
 					</div>
 
