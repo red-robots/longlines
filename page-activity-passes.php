@@ -79,6 +79,7 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 								$pid = $p->ID;
 								$adult = get_field("adult_price",$pid);
 								$young = get_field("young_price",$pid);
+								$family = get_field("family_price",$pid);
 								// need ability to hide and showd
 								$show = get_field("show_on_activities_page",$pid);
 								// echo '<pre>';
@@ -99,6 +100,9 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 										<?php } ?>
 										<?php if ($young) { ?>
 										<div class="young-price pr">Youth &ndash; <?php echo $young ?></div>	
+										<?php } ?>
+										<?php if ($family) { ?>
+										<div class="young-price pr">Family &ndash; <?php echo $family ?></div>	
 										<?php } ?>
 
 										<?php if ($buttonName && $buttonLink) { ?>
@@ -217,6 +221,7 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 								$pid = $p->ID;
 								$adult = get_field("adult_price",$pid);
 								$young = get_field("young_price",$pid);
+								$family = get_field("family_price",$pid);
 								$price = get_field("price",$pid);
 								// need ability to hide and showd
 								$show = get_field("show_on_activities_page",$pid);
@@ -238,6 +243,9 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 										<?php } ?>
 										<?php if ($young) { ?>
 										<div class="young-price pr">Youth &ndash; <?php echo $young ?></div>	
+										<?php } ?>
+										<?php if ($family) { ?>
+										<div class="family-price pr">Family &ndash; <?php echo $family ?></div>	
 										<?php } ?>
 										<?php if ($price) { ?>
 										<div class="young-price pr"><?php echo $price ?></div>	
