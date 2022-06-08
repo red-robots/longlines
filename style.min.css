@@ -1850,9 +1850,9 @@ h2.stitle,.stitle{margin:0;text-transform:uppercase;font-family:"alvarocondensed
 .home-video-gallery.numblocks2 .colRight .sm-video{width:100%}
 .home-video-gallery .mobile-name{width:100%;padding:20px 0;background-color:#000;color:#fff;text-align:center;font-family:"alvarocondensed",sans-serif;font-size:20px;font-weight:300;line-height:1.2;letter-spacing:1px;float:left;text-transform:uppercase}
 .icon-img span{display:inline-block;width:30px;height:30px;background-size:contain;background-position:center;background-repeat:no-repeat}
-.homerow.row5{background:#FFF;padding-bottom:16px}
+.homerow.row5{background:#FFF;padding-bottom:12px}
 .homerow.row5 .flexwrap{margin-left:-8px;margin-right:-8px}
-.homerow.row5 .infocol{position:relative;width:100%;padding-left:8px;padding-right:8px}
+.homerow.row5 .infocol{position:relative;width:100%;padding-left:6px;padding-right:6px}
 .homerow.row5 .infocol .inside{background:#f2f2f2;height:100%;position:relative}
 .homerow.row5 .infocol .details{padding:60px 30px;text-align:center;max-width:70%;width:100%;margin:0 auto}
 .homerow.row5 .infocol h2.stitle{margin:15px 0}
@@ -3061,7 +3061,7 @@ body.logged-in.admin-bar .job-info-page .text-centered-section{margin-top:-5px}
 .page-activity-passes .itemrow .button-group .spacer{display:inline-block;position:relative;top:-4px;font-style:italic}
 .page-activity-passes .itemrow.nobutton .activity-name span{bottom:3px}
 .page-activity-passes .camp-activities.section-content{padding-top:40px}
-#section-activities.homerow,.featured-events-section{padding-top:5px;padding-right:10px;padding-left:10px}
+#section-activities.homerow,.featured-events-section{padding-top:5px;padding-right:10px;padding-left:10px;background-color:#fff}
 .activity-blocks .imagediv span.img{position:absolute;top:0;left:0}
 .activity-blocks .imagediv iframe{position:absolute;top:0;left:0;width:100% !important;height:100% !important}
 .buy-page#primary .twoColSection{width:100%;float:left;margin-bottom:16px}
@@ -4117,7 +4117,7 @@ body.logged-in.admin-bar #site-navigation .nav-inner{padding-top:15vh}
 .flex-container.slide-horizontal .flex-direction-nav li .next,.flex-direction-nav li .next{display:none}
 .flexslider .flex-control-nav{display:none}
 }@media screen and (max-width:600px){section.route-stories .block .feat-image.no-image .bg:before{width:30vw;height:30vw}
-.topinfo .businessHours{left:-37vw}
+.topinfo .businessHours{left:-20vw}
 #section-featured-posts .block .feat-image.no-image .bg:before{width:30vw;height:30vw}
 .post-type-entries .no-image .photo:before{width:30vw;height:30vw}
 .section-flex-columns .flexcol{width:100% !important;background-image:none !important}

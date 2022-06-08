@@ -385,7 +385,8 @@ a {
 			right: 0;
 		}
 		@media screen and (max-width: $xswidth) {
-			left: -37vw;
+			// left: -37vw;
+			left: -20vw;
 		}
 	}
 	span.today.open {
@@ -2233,7 +2234,7 @@ h2.stitle,
 
 .homerow.row5 {
 	background: #FFF;
-	padding-bottom: 16px;
+	padding-bottom: 12px;
 	.flexwrap {
 		margin-left: -8px;
 		margin-right: -8px;
@@ -2241,8 +2242,8 @@ h2.stitle,
 	.infocol {
 		position: relative;
 		width: 100%;
-		padding-left: 8px;
-		padding-right: 8px;
+		padding-left: 6px;
+		padding-right: 6px;
 		@include xs {
 			width: 50%;
 		}
@@ -10331,6 +10332,7 @@ body.logged-in.admin-bar {
 	padding-top: 5px;
 	padding-right: 10px;
 	padding-left: 10px;
+	background-color: #fff;
 	@include tab() {
 		padding-right: 0;
 		padding-left: 0;
