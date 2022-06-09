@@ -32,14 +32,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-tickets-alt',
             'supports'  => array('title','editor')
         ),
-        // array(
-        //     'post_type' => 'race',
-        //     'menu_name' => 'Race Series',
-        //     'plural'    => 'Races',
-        //     'single'    => 'Race',
-        //     'menu_icon' => 'dashicons-location-alt',
-        //     'supports'  => array('title','editor')
-        // ),
+        array(
+            'post_type' => 'race',
+            'menu_name' => 'Race Series',
+            'plural'    => 'Races',
+            'single'    => 'Race',
+            'menu_icon' => 'dashicons-location-alt',
+            'supports'  => array('title','editor')
+        ),
         // array(
         //     'post_type' => 'film-series',
         //     'menu_name' => 'Film Series',
@@ -168,14 +168,14 @@ function js_custom_init() {
         //     'menu_icon' => 'dashicons-format-status',
         //     'supports'  => array('title','editor')
         // ),
-        // array(
-        //     'post_type' => 'route',
-        //     'menu_name' => 'Routes',
-        //     'plural'    => 'Routes',
-        //     'single'    => 'Route',
-        //     'menu_icon' => 'dashicons-location-alt',
-        //     'supports'  => array('title','editor')
-        // ),
+        array(
+            'post_type' => 'route',
+            'menu_name' => 'Routes',
+            'plural'    => 'Routes',
+            'single'    => 'Route',
+            'menu_icon' => 'dashicons-location-alt',
+            'supports'  => array('title','editor')
+        ),
     );
     
     if($post_types) {
