@@ -856,6 +856,9 @@ body.nav-open {
 		@include tab {
 			width: 500px;
 		}
+		img {
+			max-width: 100%;
+		}
 	}
 	.static-banner,
 	.flexslider {
