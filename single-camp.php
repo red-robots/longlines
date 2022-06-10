@@ -159,7 +159,7 @@ get_header(); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_template_part("parts/similar-posts"); ?>
+<?php //get_template_part("parts/similar-posts"); ?>
 
 <?php
 /* EVENT SPONSORS */

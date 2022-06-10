@@ -2244,6 +2244,10 @@ h2.stitle,
 		width: 100%;
 		padding-left: 6px;
 		padding-right: 6px;
+		margin-bottom: 20px;
+			@include tab() {
+				margin: 0;
+			}
 		@include xs {
 			width: 50%;
 		}
@@ -2251,6 +2255,7 @@ h2.stitle,
 			background: $gray;
 			height: 100%;
 			position: relative;
+			
 		}
 		.details {
 			padding: 60px 30px;
@@ -8050,11 +8055,15 @@ body.pageNoBanner {
 					padding-right: 5px;
 				}
 				&.center {
-					width: 100%;
+					width: auto;
 					justify-content: center;
 					align-items: center;
-					margin-top: 20px;
+					// margin-top: 20px;
+					margin: 20px auto 0 auto;
 					border-bottom: 1px solid rgba(#000, .4);
+					@include tab {
+						width: 100%;
+					}
 					// text-align: center;
 					// display: block;
 				}
@@ -8140,9 +8149,11 @@ body.pageNoBanner {
 	}
 	.fbox {
 		width: 100%;
+		margin-bottom: 20px;
 		@include tab {
 			width: 33.33%;
 			padding: 8px;
+			margin: 0;
 		}
 		&.fullwidthbox {
 			width: 100%!important;

@@ -1852,7 +1852,7 @@ h2.stitle,.stitle{margin:0;text-transform:uppercase;font-family:"alvarocondensed
 .icon-img span{display:inline-block;width:30px;height:30px;background-size:contain;background-position:center;background-repeat:no-repeat}
 .homerow.row5{background:#FFF;padding-bottom:12px}
 .homerow.row5 .flexwrap{margin-left:-8px;margin-right:-8px}
-.homerow.row5 .infocol{position:relative;width:100%;padding-left:6px;padding-right:6px}
+.homerow.row5 .infocol{position:relative;width:100%;padding-left:6px;padding-right:6px;margin-bottom:20px}
 .homerow.row5 .infocol .inside{background:#f2f2f2;height:100%;position:relative}
 .homerow.row5 .infocol .details{padding:60px 30px;text-align:center;max-width:70%;width:100%;margin:0 auto}
 .homerow.row5 .infocol h2.stitle{margin:15px 0}
@@ -2710,7 +2710,7 @@ body.pageNoBanner .site-content{min-height:35em}
 #primary .schedules-list li.item.diff:after{left:0;width:100%}
 #primary .schedules-list li.item .time,#primary .schedules-list li.item .event{display:block;position:relative;padding:0;z-index:10}
 #primary .schedules-list li.item .time{color:#000;font-family:"alvarocondensed",sans-serif;font-size:16px;font-weight:500;width:100%;letter-spacing:2px}
-#primary .schedules-list li.item .time.center{width:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:20px;border-bottom:1px solid rgba(0,0,0,0.4)}
+#primary .schedules-list li.item .time.center{width:auto;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:20px auto 0 auto;border-bottom:1px solid rgba(0,0,0,0.4)}
 #primary .schedules-list li.item .event{width:100%;max-width:100%;color:#707070}
 #primary .schedules-list li.item .dates{width:100%;text-align:center;margin-bottom:20px}
 #primary .schedules-list li.item .dates span{font-size:16px;display:inline-block;color:#707070;text-transform:uppercase}
@@ -2722,7 +2722,7 @@ body.pageNoBanner .site-content{min-height:35em}
 #primary #section-faqs{padding-top:50px;padding-bottom:50px}
 .group-events-activities.section-content,.grid-images,.section-grid-images.section-content,.camp-activities.section-content{background:#FFF;padding-top:50px;padding-bottom:0}
 .group-events-activities.section-content .entries-flexwrap,.grid-images .entries-flexwrap,.section-grid-images.section-content .entries-flexwrap,.camp-activities.section-content .entries-flexwrap{margin-left:-8px;margin-right:-8px;position:relative;bottom:-8px}
-.group-events-activities.section-content .fbox,.grid-images .fbox,.section-grid-images.section-content .fbox,.camp-activities.section-content .fbox{width:100%}
+.group-events-activities.section-content .fbox,.grid-images .fbox,.section-grid-images.section-content .fbox,.camp-activities.section-content .fbox{width:100%;margin-bottom:20px}
 .group-events-activities.section-content .fbox.fullwidthbox,.grid-images .fbox.fullwidthbox,.section-grid-images.section-content .fbox.fullwidthbox,.camp-activities.section-content .fbox.fullwidthbox{width:100% !important}
 .group-events-activities.section-content .fbox .inside,.grid-images .fbox .inside,.section-grid-images.section-content .fbox .inside,.camp-activities.section-content .fbox .inside{text-align:center;background:#f2f2f2;height:100%}
 .group-events-activities.section-content .fbox .imagediv,.grid-images .fbox .imagediv,.section-grid-images.section-content .fbox .imagediv,.camp-activities.section-content .fbox .imagediv{display:block;width:100%;float:left;position:relative;background-color:#dedede;overflow:hidden}
@@ -3721,6 +3721,7 @@ body.single-activity #subpageSlides ul.slides,body.single-activity #subpageSlide
 .home-video-gallery.count4 .small-videos{width:75%}
 .home-video-gallery.count4 .small-videos .sm-video{width:33.33%}
 .home-video-gallery .mobile-name{display:none}
+.homerow.row5 .infocol{margin:0}
 body.subpage.single .intro-galleries.half .leftcol{width:30%}
 body.subpage.single .intro-galleries.half .leftcol .wrap{padding:15px}
 body.subpage.single .intro-galleries.half .leftcol .inner{max-width:80%}
@@ -3845,11 +3846,12 @@ body.scrolled.single-dining.logged-in.admin-bar .post-hero-image .stats{top:118p
 #primary .schedules-list li.item{padding:0}
 #primary .schedules-list li.item .time,#primary .schedules-list li.item .event{display:inline;padding:8px 8px;background:#f2f2f2;text-align:right}
 #primary .schedules-list li.item .time{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;width:auto;padding-right:5px}
+#primary .schedules-list li.item .time.center{width:100%}
 #primary .schedules-list li.item .event{width:auto;max-width:unset;top:7px;line-height:1.2;padding-left:7px}
 #primary .schedules-list li.item .dates{margin-top:40px}
 #primary #section-faqs{padding-top:60px;padding-bottom:70px}
 .group-events-activities.section-content,.grid-images,.section-grid-images.section-content,.camp-activities.section-content{padding-top:80px}
-.group-events-activities.section-content .fbox,.grid-images .fbox,.section-grid-images.section-content .fbox,.camp-activities.section-content .fbox{width:33.33%;padding:8px}
+.group-events-activities.section-content .fbox,.grid-images .fbox,.section-grid-images.section-content .fbox,.camp-activities.section-content .fbox{width:33.33%;padding:8px;margin:0}
 .group-events-activities.section-content.columns4 .fbox,.grid-images.columns4 .fbox,.section-grid-images.section-content.columns4 .fbox,.camp-activities.section-content.columns4 .fbox{width:50%}
 #section-registration .registerdiv{padding-top:70px;padding-bottom:70px}
 #section-registration .steps-wrapper{padding-top:70px;padding-bottom:80px}
