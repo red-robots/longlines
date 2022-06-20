@@ -55,6 +55,8 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 						'posts_per_page'	=> -1,
 						'post_type'				=> 'pass',
 						'post_status'			=> 'publish',
+						'order' => 'ASC',
+						'order_by' => 'menu_order',
 						'tax_query' => array(
 					        array(
 					            'taxonomy' => 'pass_type',
@@ -203,6 +205,8 @@ $has_banner = ($banner) ? 'hasbanner':'nobanner';
 						'posts_per_page'	=> -1,
 						'post_type'				=> 'pass',
 						'post_status'			=> 'publish',
+						'order' => 'ASC',
+						'order_by' => 'menu_order',
 						'tax_query' => array(
 					        array(
 					            'taxonomy' => 'pass_type',
