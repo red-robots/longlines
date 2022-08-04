@@ -116,7 +116,8 @@ $rectangle = THEMEURI . "images/rectangle-narrow.png";
 
 
 	<?php /*===== ROW 3: UPCOMING EVENTS =====*/ ?>
-	<?php get_template_part('parts/upcoming-events','festival'); ?>
+	<?php get_template_part('parts/upcoming-events','music'); ?>
+	<?php //get_template_part('parts/upcoming-events','festival'); ?>
 
 
 	<?php /*===== ROW 4: STORIES =====*/

@@ -1645,7 +1645,9 @@ h2.stitle,
 	}
 	.postbox {
 		width: 100%;
-		padding: 5px;
+		// padding: 5px;
+		padding: 5px 5px 0 5px;
+		overflow: hidden;
 		@include tab {
 			width: 33.33%;
 		}
@@ -1669,6 +1671,7 @@ h2.stitle,
 			background-size: cover;
 			background-position: top center;
 			background-repeat: no-repeat;
+			line-height: 0;
 			&.mobile {
 				display: none;
 			}
