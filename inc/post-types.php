@@ -48,22 +48,22 @@ function js_custom_init() {
         //     'menu_icon' => 'dashicons-video-alt2',
         //     'supports'  => array('title','editor')
         // ),
-        // array(
-        //     'post_type' => 'music',
-        //     'menu_name' => 'River Jam Bands',
-        //     'plural'    => 'River Jam Bands',
-        //     'single'    => 'River Jam Band ',
-        //     'menu_icon' => 'dashicons-format-audio',
-        //     'supports'  => array('title','editor')
-        // ),
-        // array(
-        //   'post_type' => 'jam-programs',
-        //   'menu_name' => 'River Jam Programs',
-        //   'plural'    => 'River Jam Programs',
-        //   'single'    => 'River Jam Program',
-        //   'menu_icon' => 'dashicons-format-audio',
-        //   'supports'  => array('title','editor')
-        // ),
+        array(
+            'post_type' => 'music',
+            'menu_name' => 'River Jam Bands',
+            'plural'    => 'River Jam Bands',
+            'single'    => 'River Jam Band ',
+            'menu_icon' => 'dashicons-format-audio',
+            'supports'  => array('title','editor')
+        ),
+        array(
+          'post_type' => 'jam-programs',
+          'menu_name' => 'River Jam Programs',
+          'plural'    => 'River Jam Programs',
+          'single'    => 'River Jam Program',
+          'menu_icon' => 'dashicons-format-audio',
+          'supports'  => array('title','editor')
+        ),
         // array(
         //     'post_type' => 'festival',
         //     'menu_name' => 'Festival',
@@ -411,14 +411,14 @@ function build_taxonomies() {
       'query_var' => false,
       'show_admin_column'=>1
     ),
-    // array(
-    //   'post_type' => array('jam-programs'),
-    //   'menu_name' => 'Programming',
-    //   'plural'    => 'Programming',
-    //   'single'    => 'Programming',
-    //   'taxonomy'  => 'riverjam-programming',
-    //   'rewrite'   => 'riverjam-programming'
-    // ),
+    array(
+      'post_type' => array('jam-programs'),
+      'menu_name' => 'Programming',
+      'plural'    => 'Programming',
+      'single'    => 'Programming',
+      'taxonomy'  => 'riverjam-programming',
+      'rewrite'   => 'riverjam-programming'
+    ),
   );
 
   if($post_types) {
