@@ -1,4 +1,4 @@
-<?php
+8<?php
 $canceledImage = THEMEURI . "images/canceled.svg";
 $blank_image = THEMEURI . "images/square.png";
 $square = THEMEURI . "images/square.png";
@@ -29,7 +29,7 @@ $today = date('Y-m-d', strtotime(date('Y-m-d H:i:s'). '-1 days'));
 	
 // 	$endDate = date('Y-m-d', strtotime($today. '+'.$end.' days'));
 // }
-$section_title = 'Band Schedule';
+$section_title = 'Upcoming Events';
 $section_id = sanitize_title($section_title);
 ?>
 
