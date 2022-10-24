@@ -1,4 +1,4 @@
-8<?php
+<?php
 $canceledImage = THEMEURI . "images/canceled.svg";
 $blank_image = THEMEURI . "images/square.png";
 $square = THEMEURI . "images/square.png";
