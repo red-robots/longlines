@@ -29,7 +29,7 @@ $rectangle = THEMEURI . "images/rectangle-lg.png";
 
 	<?php /* UPCOMING */ ?>
 	<?php if( $upcoming = get_upcoming_bands() ) { ?>
-	<section id="upcoming" data-section="Upcomingz" class="section-content">
+	<section id="upcoming" data-section="Upcoming" class="section-content">
 		<div class="redDiv text-center">
 			<h2 class="stitle">Upcoming</h2>
 		</div>
