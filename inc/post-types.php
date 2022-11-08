@@ -38,7 +38,7 @@ function js_custom_init() {
             'plural'    => 'Races',
             'single'    => 'Race',
             'menu_icon' => 'dashicons-location-alt',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor', 'thumbnail')
         ),
         // array(
         //     'post_type' => 'film-series',
@@ -54,7 +54,7 @@ function js_custom_init() {
             'plural'    => 'River Jam Bands',
             'single'    => 'River Jam Band ',
             'menu_icon' => 'dashicons-format-audio',
-            'supports'  => array('title','editor')
+            'supports'  => array('title','editor', 'thumbnail')
         ),
         array(
           'post_type' => 'jam-programs',
