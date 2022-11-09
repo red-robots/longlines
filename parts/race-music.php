@@ -53,6 +53,7 @@ $entries = new WP_Query($args); ?>
 						$eventStatus = ( get_field("eventstatus") ) ? get_field("eventstatus"):'upcoming';
 						$thumbImage = get_field("thumbnail_image");
 						$hideOnPage = get_field("hidePostfromMainPage",$pid);
+						
 						if(!$hideOnPage) {
 							$groupItems[$eventStatus][] = $pid;
 						}
@@ -91,6 +92,7 @@ $entries = new WP_Query($args); ?>
 							$pagelink = get_permalink($id);
 							$start = get_field("start_date",$id);
 							$end = get_field("end_date",$id);
+							$pT = get_post_type($id);
 							$event_date = get_event_date_range($start,$end);
 							$short_description = get_field("short_description",$id);
 							$eventStatus = (isset($p->eventstatus) && $p->eventstatus) ? $p->eventstatus:'upcoming';
@@ -107,7 +109,11 @@ $entries = new WP_Query($args); ?>
 										<div class="event-completed"><span>Event Complete</span></div>
 									<?php } ?>
 									<div class="linkwrap js-blocks">
+										<?php if( $pT == 'race' ){ ?>
 										<a href="<?php echo $pagelink ?>" class="photo wave-effect js-blocksz">
+										<?php } else { ?>
+											<a href="#" data-url="<?php echo $pagelink ?>" data-action="ajaxGetPageData" data-id="<?php echo $id ?>" class="photo popdata wave-effect">
+											<?php } ?>
 											<?php if (get_the_post_thumbnail_url($p)) { ?>
 												<!-- <div class="imagediv" style="background-image:url('<?php //echo $thumbImage['sizes']['medium_large'] ?>')"></div> -->
 												<img src="<?php echo get_the_post_thumbnail_url($p); ?>" alt="<?php echo $thumbImage['title'] ?>" class="feat-img" style="visibility:visible;">
@@ -141,7 +147,13 @@ $entries = new WP_Query($args); ?>
 											<div class="short-description"><?php echo $short_description; ?></div>	
 											<?php } ?>
 											<div class="button">
-												<a href="<?php echo $pagelink ?>" class="btn-sm"><span>See Details</span></a>
+												<?php if( $pT == 'race' ){ ?>
+													<a href="<?php echo $pagelink ?>" class="btn-sm">
+												<?php } else { ?>
+													<a href="#" data-url="<?php echo $pagelink ?>" data-action="ajaxGetPageData" data-id="<?php echo $id ?>" class="popdata btn-sm">
+												<?php } ?>
+													<span>See Details</span>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -188,6 +200,127 @@ $entries = new WP_Query($args); ?>
 	<?php } ?>
 
 <?php } ?>
+
+
+<div id="activityModal" class="modal customModal fade">
+	<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<span id="eventStatusTxt"></span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modalBodyText" class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$("#activityModal").appendTo('body');
+
+	// $('#gallery').flexslider({
+ //    animation: "slide"
+ //  });
+
+	$(document).on("click",".popdata",function(e){
+		e.preventDefault();
+		var pageURL = $(this).attr('data-url');
+		var actionName = $(this).attr('data-action');
+		var pageID = $(this).attr('data-id');
+
+		$.ajax({
+			url : frontajax.ajaxurl,
+			type : 'post',
+			dataType : "json",
+			data : {
+				'action' : actionName,
+				'ID' : pageID
+			},
+			beforeSend:function(){
+				$("#loaderDiv").show();
+			},
+			success:function( obj ) {
+			
+				var content = '';
+				if(obj) {
+					var event_status = obj.eventstatus;
+					var eventStatusTxt = '';
+					if(event_status && event_status!='upcoming') {
+						eventStatusTxt = '<span>'+event_status+'</span>';
+					}
+					content += '<div class="modaltitleDiv text-center"><h5 class="modal-title">'+obj.post_title+'</h5></div>';
+					if(obj.featured_image) {
+						var img = obj.featured_image;
+						content += '<div class="modalImage"><img src="'+img.url+'" alt="'+img.title+'p" class="feat-image"></div>';
+					}
+					content += '<div class="modalText"></div>';
+
+					if(content) {
+						$("#modalBodyText").html(content);
+					}
+
+					$.get(obj.postlink,function(data){
+						var textcontent = '<div class="text">'+data+'</div></div>';
+						if(eventStatusTxt) {
+							$("#eventStatusTxt").html(eventStatusTxt);
+						} else {
+							$("#eventStatusTxt").html("");
+						}
+						$("#modalBodyText .modalText").html(textcontent);
+						$("#activityModal").modal("show");
+						$("#loaderDiv").hide();
+						if( $("#activityModal .flexslider").length > 0 ) {
+							$('.flexslider').flexslider({
+								animation: "fade",
+								smoothHeight: true,
+								start: function(){
+
+								}
+							});
+						}
+						
+
+					});
+					
+				}
+				
+			},
+			error:function() {
+				$("#loaderDiv").hide();
+			}
+		});
+
+	});
+
+
+  $(document).on('facetwp-refresh', function() {
+    var start = $('input.flatpickr-alt[placeholder="Start Date"]').val();
+    var end = $('input.flatpickr-alt[placeholder="End Date"]').val();
+    var pageURL = '<?php echo get_permalink();?>?' + FWP.build_query_string();
+    if(start || end) {
+	    $("#upcoming-bands-by-date").load(pageURL + " #entries-result",function(){
+	    	$("#loaderDiv").show();
+	    	setTimeout(function(){
+	    		$("#loaderDiv").hide();
+	    	},500);
+	    });
+	  }
+ 	});
+
+ 	// $(document).on('click','#resetFilter',function(e) {
+  //   e.preventDefault();
+  //   var pageURL = $(this).attr("href");
+  //   $("#upcoming-bands-by-date").load(pageURL + " #entries-result",function(){
+  //   	history.pushState('',document.title,pageURL);
+  //   });
+ 	// });	
+
+
+});
+</script>
 
 
 
