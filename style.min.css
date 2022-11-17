@@ -3649,6 +3649,13 @@ body.page-id-1075 .gform_body .gform_fields .gfield_price{margin-bottom:30px;bac
 body.page-id-1075 .gform_body .gform_fields .gfield_price.gfield_total{width:100%;background-color:#fff;border-left:5px solid #f8f4f4}
 body.page-id-1075 .gform_body .gform_fields #field_2_15{width:100%}
 body.page-id-1075 .gform_body .gform_fields #field_2_15 .has_first_name p{margin-right:20px}
+.cf-forms{width:100%;float:left;padding:40px 0}
+.cf-forms a{text-decoration:none}
+.cf-forms .cf-form{text-align:center;-ms-flex-preferred-size:20%;flex-basis:20%;-webkit-transform:scale(0.7);transform:scale(0.7);background-color:white;padding:20px;-webkit-box-shadow:0 0 22px -9px rgba(0,0,0,0.1);box-shadow:0 0 22px -9px rgba(0,0,0,0.1);-webkit-transition:all ease .2s;transition:all ease .2s}
+.cf-forms .cf-form:hover{-webkit-transform:scale(0.8);transform:scale(0.8);-webkit-box-shadow:0 0 22px -9px rgba(0,0,0,0.36);box-shadow:0 0 22px -9px rgba(0,0,0,0.36)}
+.cf-forms .cf-icon{width:50%;margin:0 auto 20px auto}
+.cf-forms .cf-icon img{width:100%}
+.cf-forms h3.cf-title{font-size:20px}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
@@ -4003,6 +4010,7 @@ body.page-id-1075 .gform_body .gform_fields .gfield_price{width:32%}
 .double-filter-wrapper .filter-wrapper .select,.double-filter-wrapper .filter-wrapper .select-wrap.align-middle{width:100%}
 .camp-caro.swap{display:block}
 .flexslider.swap{display:none}
+.cf-forms{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 }@media(min-width:960px){.topinfo span.el{font-size:12px}
 #banner.taxonomy-banner .static-banner{height:650px}
 .home-video-gallery.count1 .video-big{height:600px}
