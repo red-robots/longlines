@@ -2585,16 +2585,12 @@ body.page-template-page-stories .select2-container--default .select2-results__op
 .hero-register-button .stats{width:100%;z-index:110;color:#FFF;text-transform:uppercase;font-family:"alvarocondensed",sans-serif;font-size:18px;font-weight:400;line-height:1;letter-spacing:1px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .hero-register-button .stats.closed{text-align:center;padding:11px 20px 10px;background:rgba(224,72,38,0.9)}
 .hero-register-button .stats.open{text-align:left}
-.hero-register-button .registerBtn{display:inline-block;text-decoration:none;color:#FFF;text-transform:uppercase;font-family:"alvarocondensed",sans-serif;font-size:18px;font-weight:400;line-height:50px;background:#e04826;height:52px;padding:0 35px;position:relative;-webkit-box-shadow:-12px 8px 17px rgba(0,0,0,0.3);box-shadow:-12px 8px 17px rgba(0,0,0,0.3)}
-.hero-register-button .registerBtn:before,.hero-register-button .registerBtn:after{content:"";display:block;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;right:-12px;width:50px;height:50%;background-color:#e04826}
-.hero-register-button .registerBtn:before{top:0;-webkit-transform:skew(40deg);transform:skew(40deg)}
-.hero-register-button .registerBtn:after{height:51%;bottom:0;-webkit-transform:skew(-40deg);transform:skew(-40deg)}
-.hero-register-button .registerBtn:hover{background:#000}
-.hero-register-button .registerBtn:hover:before,.hero-register-button .registerBtn:hover:after{background-color:#000}
+.hero-register-button .registerBtn{display:inline-block;text-decoration:none;color:#FFF;text-transform:uppercase;font-family:"alvarocondensed",sans-serif;font-size:18px;font-weight:400;line-height:50px;background:#e04826;height:52px;padding:0 35px;position:relative;-webkit-box-shadow:-12px 8px 17px rgba(0,0,0,0.3);box-shadow:-12px 8px 17px rgba(0,0,0,0.3);width:100%;text-align:center}
 .hero-register-button.has-event-status #banner .static-banner .slideCaption .text{margin-top:3%}
-body.scrolled.single-dining .post-hero-image .stats{position:fixed;z-index:50}
-body.scrolled.single-dining.logged-in.admin-bar .post-hero-image .stats{top:135px}
-body.scrolled .hero-register-button .registerBtn{position:fixed}
+body.scrolled.single-dining .post-hero-image .stats{position:fixed;z-index:5000}
+body.scrolled.single-dining.logged-in.admin-bar .post-hero-image .stats{top:130px}
+body.scrolled .stats{position:fixed;z-index:5000;top:85px}
+body.scrolled.logged-in.admin-bar .stats{top:130px}
 .shead-icon{margin-bottom:35px}
 .shead-icon div.icon span{font-size:35px;line-height:1}
 .shead-icon div.icon.extra-card-icon,.shead-icon div.icon.icon{width:30px;margin:0 auto 15px auto}
@@ -3817,7 +3813,15 @@ body.scrolled .site-header{-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.1);box-shad
 .main-post-text.half .textcol{width:50%}
 .main-post-text.half .imagescol{width:50%}
 .hero-register-button .stats{display:block}
+.hero-register-button .registerBtn{width:auto}
+.hero-register-button .registerBtn:before,.hero-register-button .registerBtn:after{content:"";display:block;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;right:-12px;width:50px;height:50%;background-color:#e04826}
+.hero-register-button .registerBtn:before{top:0;-webkit-transform:skew(40deg);transform:skew(40deg)}
+.hero-register-button .registerBtn:after{height:51%;bottom:0;-webkit-transform:skew(-40deg);transform:skew(-40deg)}
+.hero-register-button .registerBtn:hover{background:#000}
+.hero-register-button .registerBtn:hover:before,.hero-register-button .registerBtn:hover:after{background-color:#000}
 body.scrolled.single-dining.logged-in.admin-bar .post-hero-image .stats{top:118px}
+body.scrolled.logged-in.admin-bar .stats{top:118px}
+body.scrolled .hero-register-button .registerBtn{position:fixed}
 .dining-event-details{padding-top:80px;padding-bottom:70px}
 .dining-section-map .shead-icon{padding-top:70px;padding-bottom:10px}
 .dining-section-map.half .imageBlock{width:50%}

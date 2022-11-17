@@ -7216,29 +7216,34 @@ body.page-template-page-stories {
 		padding: 0 35px;
 		position: relative;
 		box-shadow: -12px 8px 17px rgba(0,0,0,.3);
-		&:before,&:after {
-			content:"";
-			display: block;
-			transition: all ease .3s;
-			position: absolute;
-			right: -12px;
-			width: 50px;
-    	height: 50%;
-    	background-color: $red;
-		}
-		&:before {
-			top: 0;
-			transform: skew(40deg);
-		}
-		&:after {
-			height: 51%;
-			bottom: 0;
-			transform: skew(-40deg);
-		}
-		&:hover {
-			background: #000;
+		width: 100%;
+		text-align: center;
+		@include tab() {
+			width: auto;
 			&:before,&:after {
-				background-color: #000;
+				content:"";
+				display: block;
+				transition: all ease .3s;
+				position: absolute;
+				right: -12px;
+				width: 50px;
+	    		height: 50%;
+	    		background-color: $red;
+			}
+			&:before {
+				top: 0;
+				transform: skew(40deg);
+			}
+			&:after {
+				height: 51%;
+				bottom: 0;
+				transform: skew(-40deg);
+			}
+			&:hover {
+				background: #000;
+				&:before,&:after {
+					background-color: #000;
+				}
 			}
 		}
 	}
@@ -7251,22 +7256,41 @@ body.page-template-page-stories {
 body.scrolled.single-dining {
 	.post-hero-image .stats {
 		position: fixed;
-		z-index: 50;
+		z-index: 5000;
 	}
+	
 	&.logged-in.admin-bar {
 		.post-hero-image .stats {
-			top: 135px;
+			top: 130px;
 			@include tab {
 				top: 118px;
 			}
 		}
 	}
 }
-
+body.scrolled {
+	.stats {
+		position: fixed;
+		z-index: 5000;
+		top: 85px;
+		@include tab {
+			// top: 118px;
+		}
+	}
+	&.logged-in.admin-bar {
+		.stats {
+			top: 130px;
+			@include tab {
+				top: 118px;
+			}
+		}
+	}
+}
 body.scrolled {
 	.hero-register-button .registerBtn {
-		position: fixed;
+		
 		@include tab {
+			position: fixed;
 		}
 	}
 }
