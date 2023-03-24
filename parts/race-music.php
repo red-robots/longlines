@@ -64,8 +64,8 @@ $entries = new WP_Query($args); ?>
 						// echo '<pre>';
 						// print_r($groupItems);
 						// echo '</pre>';
-						// krsort($groupItems);
-						// krsort($groupItems['completed']);
+						krsort($groupItems);
+						krsort($groupItems['completed']);
 						// echo '<pre>';
 						// print_r($groupItems);
 						// echo '</pre>';
