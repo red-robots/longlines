@@ -1248,10 +1248,16 @@ function custom_query_posts($posttype,$perpage,$offset,$order='ASC') {
    //         AND DATE(m.meta_value) >= CURDATE()";
 
   /* Query first the posts with start dates */
-  $init_query1 = "SELECT p.*,date_format(str_to_date(m.meta_value, '%Y%m%d'),'%Y-%m-%d') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND m.meta_key='start_date' AND m.meta_value<>'' ORDER BY start_date {$order}";
+  // $init_query1 = "SELECT p.*,date_format(str_to_date(m.meta_value, '%Y%m%d'),'%Y-%m-%d') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND m.meta_key='start_date' AND m.meta_value<>'' ORDER BY start_date {$order}";
+$init_query1 = "SELECT p.*, date_format(str_to_date(m.meta_value, '%Y%m%d'),'%Y-%m-%d') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND p.post_status != 'trash' AND p.post_status != 'draft' AND m.meta_key='start_date' AND m.meta_value<>'' ORDER BY start_date {$order}";
+
+
 
   /* No Start Date */
-  $init_query2 = "SELECT p.*,date_format(str_to_date(m.meta_value, '%Y%m%d'),'') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND m.meta_key='start_date' AND m.meta_value='' GROUP BY p.ID ORDER BY p.ID DESC";
+  // $init_query2 = "SELECT p.*,date_format(str_to_date(m.meta_value, '%Y%m%d'),'') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND m.meta_key='start_date' AND m.meta_value='' GROUP BY p.ID ORDER BY p.ID DESC";
+  $init_query2 = "SELECT p.*, date_format(str_to_date(m.meta_value, '%Y%m%d'), '') AS start_date FROM {$wpdb->posts} p, {$wpdb->postmeta} m WHERE p.ID=m.post_id AND p.post_type='".$posttype."' AND p.post_status != 'draft' AND m.meta_key='start_date' AND m.meta_value='' GROUP BY p.ID ORDER BY p.ID DESC";
+
+
 
   // /* Event Status */
   // $init_query3 = "SELECT p.*, m.meta_value AS eventstatus
